@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+body {
+  line-height: 1.6;
+  font-family: -app-sysytem-font, sans-serif;
+}
+.btn {
+  display: block;
+  width: 184px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 24px;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.4;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.btn-primary {
+  background-color: #07c160;
+}
