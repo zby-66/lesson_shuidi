@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+    canvas{
+        border: 1px solid #000;
+        }
+        </style>
+</head>
+<body>
+    <canvas id="myCanvas"  >
+
+    </canvas>
+    <script>
+    let dis=1; 
+    function animation(){
+            requestAnimationFrame(function(){
+                ctx.clearRect(0,0,300,150)//擦掉
+                ctx.fillText(++dis,110,100);//值xy
+               
+                animation();//递归
+            })
+        }
+        animation();
+    const canvas=document.getElementById('myCanvas');
+    var ctx=canvas.getContext('2d');
+    ctx.fillStyle ='red';
+    ctx.font="50px Verdana";
+    
+    // canvas.Width ='50';
+    // // canvas.style.height='50vh';
+    // // canvas.Width=window.innerWidth;
+    // canvas.height=window.innerHeight;
+    </script>
+</body>
+</html>
