@@ -6,3 +6,26 @@ git cheakout xxx//切换分支
 
 
 bug fixed
+
+
+
+git 操作
+git init 初始化
+git —— 版本仓库
+git status 
+git add —— 添加到暂存区
+git reset —— 对add进行撤回，在版本间快速寻址
+	git reset --hard HEAD^ —— HEAD 表示指针，^表示撤回最近的一个版本 ^^表示撤回最近两个版本
+	git reset --hard 67dab5 —— 版本号(哈希码)的前6位
+git reflog —— 撤回reset
+	git reflog
+	git reset --hard b7f7f47 哈希码及其下面的版本都恢复
+git rm  -rf —— 递归删除
+
+git branch 查看分支
+git branch chencc 建立分支chencc
+git checkout chencc 切换到分区chencc
+git merge chance 合并分支
+git checkout -b chencc 建立并切换分区
+git branch -d chance 删除chencc分支
+
