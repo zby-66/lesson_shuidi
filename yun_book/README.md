@@ -10,14 +10,6 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
-- 云时代的开发方式
-  未来的服务器 在云端 docker 不用买或租硬件。
-  计算能力 云服务商提供给我们。 
-  不需要知道服务器在哪里，数据库在哪里，文件存储怎么做。
-  云开发能力像水和电一样，一插就有
-
-
-
 - 图书馆的管理小程序 
     开发快， 不用安装 （）
 - 选择一款框架
@@ -26,3 +18,10 @@
 - 小程序转为node 项目
     nmp init -y
     nmp install vant-weapp -S --production
+    线上环境
+
+- 二维码是什么？
+信息的加密
+isbn url ,公众账号
+
+拿到isbn后 怎么拿到图书的信息？
