@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/zby-66/lesson_shuidi#readme",
   "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.4",
+    "mysql": "^2.17.1",
+    "nodemon": "^2.0.1",
+    "redis": "^2.8.0",
     "vant-weapp": "^0.5.23"
   },
   "devDependencies": {}
