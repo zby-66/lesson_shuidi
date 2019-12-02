@@ -1,0 +1,56 @@
+<!--index.wxml-->
+<van-tabs active="{{ active }}" >
+  <van-tab title="推荐">
+  <view>
+  <swiper indicator-dots="{{indicatorDots}}" 
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<van-grid clickable column-num="5" border="{{false}}">
+  <van-grid-item
+    icon="../../images/福字.png"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    text="品牌团"
+  />
+  <van-icon class="iconfont" class-prefix='icon' slot="icon" slot-scope="props" :name='props.active ? icon.home_active:icon.home_normal'></van-icon>
+  <van-grid-item
+    icon="search"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    text="新人专享"
+  />
+  <van-grid-item
+    icon="search"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    text="醒购店长"
+  />
+  <van-grid-item
+    icon="search"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    text="助力省钱"
+  />
+  <van-grid-item
+    icon="search"
+    link-type="navigateTo"
+    url="/pages/dashboard/index"
+    text="积分商城"
+  />
+</van-grid>
+  </van-tab>
+  <van-tab title="运动">内容 2</van-tab>
+  <van-tab title="服饰">内容 3</van-tab>
+  <van-tab title="鞋包">内容 4</van-tab>
+  <van-tab title="钟表">内容 5</van-tab>
+  <van-tab title="美妆">内容 6</van-tab>
+</van-tabs>
+
+
+  

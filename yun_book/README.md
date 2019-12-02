@@ -16,8 +16,8 @@
     weui  有赞 vant
     vant
 - 小程序转为node 项目
-    nmp init -y
-    nmp install vant-weapp -S --production
+    npm init -y
+    npm install vant-weapp -S --production
     线上环境
     git push origin  上传最后一步
 - 二维码是什么？
