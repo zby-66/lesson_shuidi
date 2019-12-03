@@ -13,32 +13,32 @@
 </view>
 <van-grid clickable column-num="5" border="{{false}}">
   <van-grid-item
-    icon="../../images/福字.png"
+    icon="../../../images/fu.png"
     link-type="navigateTo"
     url="/pages/dashboard/index"
     text="品牌团"
   />
   <van-icon class="iconfont" class-prefix='icon' slot="icon" slot-scope="props" :name='props.active ? icon.home_active:icon.home_normal'></van-icon>
   <van-grid-item
-    icon="search"
+    icon="../../../images/xingren.png"
     link-type="navigateTo"
     url="/pages/dashboard/index"
     text="新人专享"
   />
   <van-grid-item
-    icon="search"
+    icon="../../../images/dianzhang.png"
     link-type="navigateTo"
     url="/pages/dashboard/index"
     text="醒购店长"
   />
   <van-grid-item
-    icon="search"
+    icon="../../../images/zhuli.png"
     link-type="navigateTo"
     url="/pages/dashboard/index"
     text="助力省钱"
   />
   <van-grid-item
-    icon="search"
+    icon="../../../images/jifen.png"
     link-type="navigateTo"
     url="/pages/dashboard/index"
     text="积分商城"

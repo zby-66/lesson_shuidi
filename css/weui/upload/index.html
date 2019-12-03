@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page {
+            overflow-y: scroll;
+            overflow-x: hidden;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            /* background-color: green; */
+        }
+
+        body {
+            /* 继承 */
+            font-family: -apple-system, sans-serif;
+            line-height: 1.6;
+        }
+
+        .body, html {
+            height: 100%;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body,
+        .page {
+            background-color: #ededed;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .link {
+            color: #07c160;
+        }
+
+        .page_hd {
+            /* 容器 */
+            padding: 40px;
+        }
+
+        .page_title {
+            font-size: 20px;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        .page_desc {
+            margin-top: 4px;
+            color: rgba(0, 0, 0, .5);
+            text-align: left;
+            font-size: 14px;
+        }
+        .page_ft {
+            padding-top: 40px;
+            padding-bottom: 10px;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .page_ft img{
+            height: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- upload 章法 -->
+    <!-- 国际命名规范 BEM -->
+    <div class="page uploader">
+        <!--Block-->
+        <div class="page_hd">
+            <h1 class="page_title">Uploader</h1>
+            <!--- Block-->
+            <!-- 完整表达 合适的标签 BEM -->
+            <p class="page_desc">
+                上传组件，一般配合
+                <a href="#gallery" class="link">组件Galler</a>
+                来使用
+            </p>
+        </div>
+        <!--Element-->
+        <div class="page_db"></div>
+        <div class="page_ft">
+            <a href="#">
+                <img src="/icon_footer_link.png" alt="">
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>
