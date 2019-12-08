@@ -25,7 +25,7 @@ module.exports = {
       moble: STRING(11),
       sex: { type: INTEGER,
       defaultValue: 0},
-      create_at: Sequelize.DATE,
+      created_at: Sequelize.DATE,
       updated_at: Sequelize.DATE,
 
     });
