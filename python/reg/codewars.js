@@ -29,11 +29,12 @@ const likes = names => {
         '{name}, {name}, and {n} others like this'
     ];
     let idx = Math.min(names.length, 4);
+    console.log(idx);
     return templates[idx].replace(/{name}|{n}/g, function(val) {
-        //console.log(val);
+        console.log(val);
         return val === '{name}'?names.shift():names.length
     });
 }
 
-console.log(likes(["Alex", "Jacob"]));
+console.log(likes([]));
   
