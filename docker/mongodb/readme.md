@@ -12,6 +12,6 @@
 
 ## mongodb shell交互
 -  use tutorial;新建一个数据库
-- db.users.insert({username: 'smith'});
-- show collections;
-- db.users.find({})
+-  db.users.insert({username: 'smith'});
+-  show collections;
+-  db.users.find({})
