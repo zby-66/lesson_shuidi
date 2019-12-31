@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: () => import(/* webpackChunkName: "about" */ '../views/Goods.vue')
   },
   {
     path: '/goods',
@@ -24,7 +24,8 @@ const routes = [
     path: '/seller',
     name: 'Seller',
     component: () => import(/* webpackChunkName: "about" */ '../views/Seller.vue')
-  }
+  },
+
 ]
 
 const router = new VueRouter({
