@@ -1,5 +1,5 @@
 <template>
     <div>
-        Ratings
+        Ratings（评分）
     </div>
 </template>

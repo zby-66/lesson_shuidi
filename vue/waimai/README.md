@@ -35,3 +35,6 @@ components/header/header 效力于多个页面
 - Vue 禁止DOM 操作
     ref= ""
     this.$refs.
+
+npm install --save better-scroll
+ npm i   stylus  
