@@ -9,3 +9,4 @@ COPY . /usr/src/nodejs/
 
 EXPOSE 1314
 CMD yarn start
+

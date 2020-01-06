@@ -26,3 +26,17 @@ img.bosszhipin.com
 dns 解析？网络供应商 列表
 公司会在网络供应商机房里去装一些cdn机器
 本地没有？ 去中央服务器里请求一次 缓存在本地
+- koa-static
+- 表单提交
+    koa-bodyparser
+    GET  请求头里  head GET
+    url?a=1&b=2
+    POST  head url
+    body.length + body
+
+
+## node的发布
+    docker  容器化
+
+node 项目， 写完后， 测试工程师 （环境？）
+让项目在不同的机器里面，享用相同的环境，跑起来  只要装一个docker
