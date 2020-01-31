@@ -12,37 +12,35 @@
 
 <script>
 import amapFile from "../../utils/amap-wx.js";
+import { mapState, mapMutations } from "vuex";
 export default {
   data () {
     return {
-      cityName: '南昌'
-    }
+      }
+    },
+    computed: {
+    ...mapState(["cityName"])
   },
   methods: {
-    toMappage () {
-      //通过wx.getSetting 先查询用户是否授权 "scoped.record"
-      let _this = this;
-     wx.getSetting({
+    ...mapMutations(["update"]),
+    toMappage() {
+      var _this = this;
+      // 可以通过 wx.getSetting 先查询一下用户是否授权了 "scope.record" 这个 scope
+      wx.getSetting({
         success(res) {
           //如果没有同意授权,打开设置
-          // console.log(res)
           if (!res.authSetting["scope.userLocation"]) {
             wx.openSetting({
               success: res => {
-                //获取授权位置信息
                 _this.getCityName();
               }
-            })
+            });
           } else {
             wx.navigateTo({
               url: "/pages/mappage/main"
             });
           }
-        },
-        fail: (err) =>{
-          console.log(err)
-        },
-        complete: () =>{}
+        }
       });
     },
     getCityName() {
@@ -56,7 +54,7 @@ export default {
           console.log(data);
           // data[0].regeocodeData.formatted_address
           // _this.cityName = data[0].regeocodeData.formatted_address;
-          // _this.update({ cityName: data[0].regeocodeData.formatted_address });
+          _this.update({ cityName: data[0].regeocodeData.formatted_address });
         },
         fail: function (info) {
           //失败回调
@@ -66,6 +64,11 @@ export default {
           _this.cityName = "北京市";
           _this.update({ cityName: "北京市" });
         }
+      });
+    },
+    toSearch() {
+      wx.navigateTo({
+        url: "/pages/search/main"
       });
     },
   }
