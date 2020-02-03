@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" alt="" id="pic" width="300">
+    <input type="file" id="file" />
+    <script>
+     document
+        .getElementById('file')
+        .addEventListener('change', (event)=>{
+            const file = event.target.files[0];
+            // console.log(Object.prototype.toString.call(file));
+            const URL = window.URL;
+            const objecturl = URL.createObjectURL(file);
+            console.log(objecturl);
+            const pic = document.getElementById('pic');
+            pic.src = objecturl;
+            pic.onload = function(){
+                URL.revokeObjectURL(objecturl);
+                console.log('为了获得最佳性能和内存使用，释放对象');
+            }
+        })
+    </script>
+</body>
+</html>
