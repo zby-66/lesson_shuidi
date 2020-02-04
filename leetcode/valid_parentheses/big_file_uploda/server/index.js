@@ -5,7 +5,7 @@ const fse = require('fs-extra'); //fs 扩展包
 const UPLOAD_DIR = path.resolve(__dirname, ".", "target");
 // console.log(UPLOAD_DIR);
 const filename = 'yb';
-const filePath = path.resolve(UPLOAD_DIR, "..", `${filename}.jpeg`);
+const filePath = path.resolve(UPLOAD_DIR, "..", `${filename}.jpg`);
 
 
 const pipeStream = (path, writeStream) =>
@@ -34,7 +34,7 @@ const mergeFileChunk = async (filePath, filename, size) => {
                 path.resolve(chunkDir, chunkPaths),
                 fse.createWriteStream(filePath, {
                     start: index * size,
-                    end: (index + 1) * size
+                    end: (index + 4) * size
                 })
             )
         )

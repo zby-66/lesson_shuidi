@@ -23,3 +23,7 @@
         Promise.all 来包装每个chunk的写入
         start end  fse.createWriteStream
         每个 chunk写入 先创建可读流，再pipe给可写流的过程
+
+        思路：以原文件作为文件夹的名字，在上传blobs到这个文件夹，并且每个blob都以文件-index的命名方式来存储
+
+- http 并发上传大文件切片 
