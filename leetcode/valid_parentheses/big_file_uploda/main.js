@@ -6,6 +6,7 @@ const server = http.createServer();
 const UPLOAD_DIR = path.resolve(__dirname, ".", "target");
 server.on("request", async(req,res) => {
     // res.end("hello");
+   
     res.setHeader("Access-Control-Allow-Origin", "*");
     res.setHeader("Access-Control-Allow-Headers", "*");
     // res.end("hello");
