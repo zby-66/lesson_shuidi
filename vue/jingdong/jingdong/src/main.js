@@ -5,8 +5,9 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 import 'amfe-flexible'
+import steaxios from './setaxios'
 
-
+steaxios();
 Vue.config.productionTip = false
 Vue.prototype.$http=axios//挂载axios
 new Vue({

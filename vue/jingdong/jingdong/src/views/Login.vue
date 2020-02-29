@@ -1,6 +1,6 @@
 <template>
   <div>
-      <img class="headerimg" src="https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=1277879205,254782362&fm=85&app=79&f=JPEG?w=121&h=75&s=7F679856D0350C314E2F6FAD0300700A" alt="">
+      <img class="headerimg" src="https://www.baidu.com/img/bd_logo1.png" alt="">
     <cube-form
       :model="model"
       :schema="schema"
@@ -66,13 +66,22 @@ export default {
         }
     },
     methods: {
-    submitHandler(e) {
-        e.preventDefault()
-        this.$http.get('/api/register',{params:this.model}).then(res =>{
-            console.log(res.data.success)
-        }).catch(err=>{
-            console.log(err)
-        })
+        async submitHandler(e) {
+            e.preventDefault()
+            try{
+                const result = await this.$http.get('/api/login',{params:this.model})
+                // console.log(result.data.token)
+                if(result.code == '0'){
+                    // alert(result.data.message)
+                    this.$store.commit('settoken', result.token)
+                    window.localStorage.setItem('token', result.token)
+                    this.$router.replace({path:'/botnav/index'})
+                }else{
+                    alert(result.message)
+                }
+            }catch(err){
+                console.log(err)
+            }
         },
     }
 };
