@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      
+    }
+    .box1 {
+      /* 2：will-change 把这个元素 提升为独立的一个图层  */
+      /* 3: backface-visibility: hidden; */
+      /* 4: 重叠 */
+      will-change: transform;
+      /* transform: translate3d(0, 0, 0); */
+      z-index: 1;
+      position: relative;
+      background-color: blue;
+    }
+    .box2 {
+      /* 1：translate3d 把这个元素 提升为独立的一个图层 */
+      transform: translate3d(0, -30px, 0);
+      background-color: black;
+      z-index: 3;
+      position: relative;
+      /* 经验： css  */
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1">
+    box1
+  </div>
+  <div class="box box2">
+    box2
+    <div>
+      123456
+    </div>
+  </div>
+  <script>
+    const box = document.querySelector('.box');
+    setTimeout(() => {
+      box.style.transform = 'translate3d(60px, 0, 0)';
+    }, 3000);
+  </script>
+</body>
+</html>
