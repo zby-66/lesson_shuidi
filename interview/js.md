@@ -52,3 +52,10 @@ console.log(weakmap.get(keyObject));
 keyObject=null;
 console.log(weakmap.has(keyObject));
 //output false
+
+## 运算符优先级
+    https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+- 运算符的优先级决定了表达式中运算执行的先后顺序，优先级高的运算符最先被执行。
+- 关联性决定了拥有相同优先级的运算符的执行顺序。考虑下面这个表达式：
+- a OP b OP c
+- 左关联（左到右）相当于把左边的子表达式加上小括号(a OP b) OP c，右关联（右到左）相当于a OP (b OP c)。赋值运算符是右关联的，
