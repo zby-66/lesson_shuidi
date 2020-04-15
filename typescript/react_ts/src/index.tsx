@@ -7,10 +7,11 @@ import * as ReactDOM from 'react-dom'; // dom 挂载
 // tsx 文件， react 独有的 JSX 语法表达文件 
 // index ->  index.tsx  入口文件里就使用 jsx语法
 
-import { HelloComponent } from './hello'; //
+// import { HelloComponent } from './hello'; //
+import { AppRouter } from './router';
 
 // console.log(HelloComponent);
 ReactDOM.render(
-  <HelloComponent />,
+  <AppRouter />,
   document.getElementById('root')
 )

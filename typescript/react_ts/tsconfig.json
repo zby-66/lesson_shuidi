@@ -1,17 +1,17 @@
 {
-    "compilerOptions": {
-      "target": "es6",
-      "module": "es6",
-      "moduleResolution": "node",
-      "declaration": false,
-      "noImplicitAny": false,
-      "sourceMap": true,
-      "jsx": "react", // 支持jsx中react的语法
-      "noLib": false,
-      "suppressImplicitAnyIndexErrors": true
-    },
-    "compileOnSave": false,
-    "exclude": [
-      "node_modules"
-    ]
-  }
+  "compilerOptions": {
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node",
+    "declaration": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "jsx": "react",
+    "noLib": false,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "compileOnSave": false,
+  "exclude": [
+    "node_modules"
+  ]
+}
