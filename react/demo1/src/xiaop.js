@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import XiaopItem from './xiaopItm'
+import Dz from './Dz'
 import './style.css'
 import axios from 'axios'
 class Xiaop extends Component {
@@ -69,6 +70,7 @@ class Xiaop extends Component {
                         })
                     }
                 </ul>
+                <Dz/>
             </Fragment>
         )
     }

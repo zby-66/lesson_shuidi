@@ -1,1 +1,57 @@
 .input{border: 3px solid royalblue}
+/* .show{ animation: show-itme 2s ease-in forwards;}
+.hide{ animation: hide-itme 2s ease-in forwards;}
+
+@keyframes hide-item{
+    0%{
+        opacity: 1;
+        color: blue;
+    }
+    50%{
+        opacity: 0.5;
+        color: red;
+    }
+    100%{
+        opacity: 0;
+        color: aquamarine;
+    }
+}
+
+@keyframes show-item{
+    0%{
+        opacity: 0;
+        color: blue;
+    }
+    50%{
+        opacity: 0.5;
+        color: red;
+    }
+    100%{
+        opacity: 1;
+        color: aquamarine;
+    }
+} */
+
+.boss-text-enter{
+
+}
+
+.boss-text-enter-active{
+
+}
+
+.boss-text-enter-done{
+
+}
+
+.boss-text-exit{
+
+}
+
+.boss-text-exit-active{
+
+}
+
+.boss-text-exit-done{
+
+}
