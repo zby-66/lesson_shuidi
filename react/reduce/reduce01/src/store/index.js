@@ -1,7 +1,16 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware, compose} from 'redux'
 import reducer from './reducer'
-const store = createStore(
+import thunk from 'redux-thunk'
+//增强函数 配置 redux-thunk
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__?
+    window.__REDUX_DEVTOOLS_EXTENSION__COMPOSE__({}):compose
+
+const enhancer = composeEnhancers(applyMiddleware(thunk))
+
+const store = createStore(//因为store中只接收两个参数
     reducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    enhancer
+    // applyMiddleware(thunk),
+    // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     )
 export default store;

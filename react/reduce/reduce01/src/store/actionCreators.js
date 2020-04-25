@@ -1,4 +1,4 @@
-import {CHANGE_INPUT,DELETE_ITEM,ADD_ITEM} from './actionTypes';
+import {CHANGE_INPUT,DELETE_ITEM,ADD_ITEM,GET_LIST} from './actionTypes';
 import { ChangeStream } from 'mongodb';
 
 export const changeInputAction = (value) =>({
@@ -11,4 +11,9 @@ export const addItemAction = () =>({
 export const deleteItemAction = (index) =>({
     type: DELETE_ITEM,
     index
+})
+
+export const getListAction = (data) =>({
+    type: GET_LIST,
+    data
 })
