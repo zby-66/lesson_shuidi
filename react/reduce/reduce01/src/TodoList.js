@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import 'antd/dist/antd.css'
 // import { Input , Button,List} from 'antd';
 import store from './store'
-import {CHANGE_INPUT,ADD_ITEM,DELETE_ITEM} from './store/actionTypes'
-import {changeInputAction,addItemAction,deleteItemAction, getListAction} from './store/actionCreators'
+// import {CHANGE_INPUT,ADD_ITEM,DELETE_ITEM} from './store/actionTypes'
+import {getTodoList,changeInputAction,addItemAction,deleteItemAction, getListAction,getMyListAction} from './store/actionCreators'
 import TodoListUI from './TodoListUI'
-import axios from 'axios'
+// import axios from 'axios'
 // const data=[
 //     '事情一',
 //     '事情二',
@@ -36,12 +36,10 @@ class TodoList extends Component {
     }
 
     componentDidMount(){
-        axios.get('https://www.easy-mock.com/mock/5cfcce489dc7c36bd6da2c99/xiaojiejie/getList').then((res)=>{
-            console.log(res); 
-            const data = res.data
-            const action = getListAction(data)
-            store.dispatch(action)       
-        })
+            // const action = getTodoList()    
+            // store.dispatch(action)
+            const action = getMyListAction()
+            store.dispatch(action)
     }
 
     changeInputValue(e){
