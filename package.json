@@ -26,7 +26,7 @@
     "nodemon": "^2.0.1",
     "redis": "^2.8.0",
     "vant-weapp": "^0.5.23",
-    "yarn": "^1.21.1"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {}
 }

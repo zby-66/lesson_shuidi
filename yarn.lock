@@ -1272,7 +1272,7 @@ yallist@^2.1.2:
   resolved "https://registry.npm.taobao.org/yallist/download/yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52"
   integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
 
-yarn@^1.21.1:
-  version "1.21.1"
-  resolved "https://registry.npm.taobao.org/yarn/download/yarn-1.21.1.tgz?cache=0&sync_timestamp=1576069986796&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fyarn%2Fdownload%2Fyarn-1.21.1.tgz#1d5da01a9a03492dc4a5957befc1fd12da83d89c"
-  integrity sha1-HV2gGpoDSS3EpZV778H9EtqD2Jw=
+yarn@^1.22.0:
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.0.tgz#acf82906e36bcccd1ccab1cfb73b87509667c881"
+  integrity sha512-KMHP/Jq53jZKTY9iTUt3dIVl/be6UPs2INo96+BnZHLKxYNTfwMmlgHTaMWyGZoO74RI4AIFvnWhYrXq2USJkg==
