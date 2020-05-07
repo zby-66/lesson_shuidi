@@ -1,0 +1,7 @@
+<!--wxml文件
+wxapp view div 小程序的内置组件
+swiper 组件，为组？ html+css+js 功能更加强大
+组件化时代是伟大的提升
+vant-button 来自于有赞
+-->
+<van-button square type = "primary" block bind:click="navigateToAdd">新增数据</van-button>

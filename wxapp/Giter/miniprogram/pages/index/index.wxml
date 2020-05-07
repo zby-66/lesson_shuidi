@@ -1,0 +1,11 @@
+<!-- github 小程序  github api 最火的项目 -->
+<view class="trends page">
+  <!-- 数据驱动组件  -->
+  <picker class="lang-picker" mode="multiSelector" value="{{selectedIndices}}" range="{{selectorValues}}" 
+  bindchange="changeFilter"
+  range-key="label">
+    <button type="primary" size="mini">
+      {{since.label}} / {{lang.label}}
+    </button>
+  </picker>
+</view>

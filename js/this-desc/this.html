@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        // function demo() {
+        //     var user = '小小洋'
+        //     console.log(this) // this指向的是调用它的对象 就近原则
+        //     console.log(this.user)
+        // }
+        // window.demo()
+
+        // var obj = {
+        //     a: 1,
+        //     b: {
+        //         a: 2,
+        //         fn: function () {
+        //             console.log(this.a)
+        //             console.log(this)
+        //         }
+        //     }
+        // }
+        // // obj.b.fn()
+        // // obj.fn()
+        // var demo = obj.b.fn;// 引用方法fn 不是调用
+        // demo()
+
+
+        function returnThis() {
+            console.log(this)
+            return this
+            
+        }
+        var user = {
+            name: '小彭'
+        }
+        returnThis.call(user)  // Object.prototype.call()
+        returnThis.apply(user)
+    </script> -->
+
+
+    <!-- <script>
+        var a = {
+            user: '小小洋',
+            fn: function(e, ee, f) {
+                console.log(this.user)
+                console.log(e +ee,f)
+            }
+        }
+        var b = a.fn;
+        // b()
+        // b.call(a, 1, 2)
+        // b.apply(a, [1,2])//两个传参不一样
+
+
+        var c = b.bind(a) //bind返回的是一个修改后的函数
+        c(1,2)
+        b.bind(a)
+    </script> -->
+
+    <script>
+        function Fn() {
+            this.user = 'xxy'
+        }
+        // var demo = new Fn()
+        // console.log(demo.user)
+        function demo() {
+            console.log(this)
+        }
+        // demo()
+        // new demo()
+        var user1 = { name: 'xxp'}
+        demo.call(user1)
+        var user2 = demo.bind(user1)
+        user2()
+
+        new user2() // new会覆盖bind的绑定
+    </script>
+</body>
+
+</html>

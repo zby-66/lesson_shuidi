@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>函数里的super</title>
+</head>
+<body>
+  <script>
+  // 父类
+  // var obj1 = {
+  //   sayHello() {
+  //     console.log('父类的hello');
+  //   }
+  // }
+  // // 子类
+  // var obj2 = {
+  //   sayHello() {
+  //     // 调用父类的方法
+  //     super.sayHello();
+  //     console.log('子类的hello')
+  //   }
+  // }
+
+  var obj1 = {
+    sayHello() {
+      console.log('父类的hello');
+    }
+  }
+  // 子类
+  var obj2 = {
+    sayHello() {
+      // 调用父类的方法
+      super.sayHello(); // es5里没有class  super 
+      console.log('子类的hello')
+    }
+  }
+
+  //es6 里Object对象的新方法
+  // 原型继承·
+  Object.setPrototypeOf(obj2, obj1);
+  obj2.sayHello();
+  // 构成父子关系？  
+  </script>
+</body>
+</html>

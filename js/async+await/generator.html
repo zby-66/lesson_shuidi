@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function foo() {
+            return 'foo';
+        }
+
+        function* test() {
+            console.log('start');
+            let a = yield foo();//造成终止   协程
+            console.log('a',a);
+            let b = yield 2;
+            console.log('b', b);
+            console.log('end');
+        }
+        // let g = test();
+        // console.log(g.next());//几个 yield 就用几个next
+        // console.log(g.next());
+        // console.log(g.next());
+
+
+        function generateAutoRun(gen){
+            let g = gen();
+            function next(value) {
+                let res = g.next();
+                if (res.done) return;
+                next(res.value);
+            }
+            next();
+        }
+
+        generateAutoRun(test);
+    </script>
+</body>
+
+</html>

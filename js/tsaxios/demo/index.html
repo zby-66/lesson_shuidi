@@ -1,0 +1,18 @@
+<script src="../dist/axios.umd.js"></script>
+<script>
+  // get url 后面
+  // post body
+  axios({
+    url: 'http://neteasecloudmusicapi.zhaoboy.com/search',
+    params: {
+      keywords: '海阔天空',
+      time: new Date(),
+      arr: [1,2],
+      obj: {
+        a: 1, b: 2
+      }
+    }
+  })
+  // http://baidu.com?keywords=海阔天空&arr[]=1&arr[]=2&obj=JSON.stringfr(obj)
+  // 
+</script>

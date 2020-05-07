@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盖楼</title>
+    <link rel="stylesheet" href="./tower.css">
+</head>
+<body>
+    <!-- 画布元素 -->
+    <canvas id="canvas" class="hide"></canvas>
+    <div class="content">
+        <!-- 加载页 -->
+        <div class="loading hide">
+                <div class="main">
+                  <img src="./assets/assets/main-loading.gif" alt="">
+                  <div class="progress">
+                    <div class="title">0%</div>
+                    <div class="bar">
+                      <div class="sub">
+                        <div class="percent"></div>
+                      </div>
+                      <div class="text">加载中</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 开始游戏 -->
+            <div class="landing">
+                <div class="action-1">
+                    <img src="./assets/assets/main-index-title.png" alt="" class="title swing">
+                </div>
+                <div class="action-2">
+                    <img src="./assets/assets/main-index-start.png" alt="" id="star" class="star">
+                </div>
+            </div>
+    <script>
+        window.onload = function () {
+            // document.getElementById('canvas')
+            // .style.display = 'block';
+            document.getElementById('canvas')
+            .classList.remove('hide')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <img src="./sw-lifecycle.png" alt="">
+  <script>
+    // window
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js', { scope: './'})
+      .then(function(work) {
+        console.log('sw 完成');
+      })
+      .catch(function(err) {
+        console.log('sw 失败', err);
+      })
+
+    }
+  </script>
+</body>
+</html>
