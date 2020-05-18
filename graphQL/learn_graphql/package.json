@@ -1,0 +1,24 @@
+{
+  "name": "learn_graphql",
+  "version": "1.0.0",
+  "description": "- 如何设置一个科学合理的url\r   RESTFul 它是后端暴露资源的解决方案， 多年来一直受追捧 url里不要有动词\r   1. HTTP动词\r     GET/POST/DELETE/PATCH/PUT.... 动词仅限这些\r   2. 每一个url代表一种资源 /posts/1 名词\r   3. 客户端通过HTTP动词，对服务器资源进行操作，实现表现层状态转化",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js --exec babel-node --presets env",
+    "json-server": "./node_modules/.bin/json-server --watch db.json --port 3300"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^15.0.0",
+    "json-server": "^0.16.1"
+  }
+}
