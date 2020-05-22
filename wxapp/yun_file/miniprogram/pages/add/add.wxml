@@ -1,4 +1,0 @@
-<!--miniprogram/pages/add/add.wxml-->
-<van-button type="warning" block bindtap="upload">
-上传图片
-</van-button>
