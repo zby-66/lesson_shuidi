@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h1>xiaop&daz</h1>
+    <script>
+        // html -> chorimum 文件来运行
+        var events = require('events');
+        const { ipcRenderer } = require('electron');
+        console.log(ipcRenderer instanceof events.EventEmitter, 'xiaop')
+        // node 异步事件循环机制的实现
+        // createServer on listen
+        // 订阅发布者模式， send机制
+        ipcRenderer.send('greet',{
+          message: 'hello main ~'
+        })
+        ipcRenderer.on('greet',(event, args) => {
+          console.log(args)
+        })
+
+        
+    </script>
+</body>
+</html>
