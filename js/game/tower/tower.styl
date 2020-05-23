@@ -1,0 +1,95 @@
+*
+    margin 0
+    padding 0
+
+img 
+    width 100%
+
+html
+    background #ffffff
+    height 100%
+    font-size 17.6vh
+
+body
+    font-family sans-serif
+    margin 0 auto
+    text-align center
+    width 100%
+    height 100%
+    background #f95240 url('./assets/assets/main-bg.png')
+
+#canvas
+    position fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    width 100%
+    height 100%
+
+.hide
+    display none
+
+.content
+    height 100vh
+    margin 0 auto
+    position relative 
+    
+.loading
+    background-color #f05a50
+    height 100%
+    width 100%
+    .main
+        width 60%
+        margin 0 auto
+        color #ffffff
+        img
+            width 60%
+            margin 1rem auto 0
+            color: #ffffff
+        .title
+            font-size: 0.3rem
+        .text
+            font-size: 0.15rem
+        .bar
+            height 0.12rem
+            width 100%
+            border: 3px solid #ffffff
+            border-radius: .6rem
+            margin 0.1rem 0
+            .sub
+                height 0.1rem
+                width 98%
+                margin 0.008rem auto 0
+            .percent
+                height 100%
+                width 10%
+                background-color #ffffff
+                border-radius .6rem
+                transition: width .1s
+
+.landing
+    .action-1
+        position absolute
+        top 0
+        .title
+            width 60%
+        .swing
+            animation: sw 2s ease-in-out alternate infinite//一直晃 
+    .action-2
+        position absolute
+        bottom 0.2rem
+        width 100%
+        .star
+            width 65%
+
+
+@keyframes sw 
+    0%
+        transform: rotate(5deg)
+        transform-origin: top center
+    100%
+        transform: rotate(-5deg)
+        transform-origin: top center
+
+            

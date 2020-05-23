@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let authors = [],
+            post = [];
+
+
+
+        const postPromise = fetch('/post.json');  // new Promise((resolve, reject) =>{
+        //     fetch('/post.json')
+        //     .then(data => data.json)
+        //     .then(data => {
+        //         resolve(data);
+        //     })
+        // })
+        const authorsPromise = fetch('/authors.json'); //new Promise((resolve, reject) => {
+        //     fetch('/authors.json') //异步
+        //                 .then(data => data.json())
+        //                 .then(data => {
+        //                     authors = data;
+        //                     resolve(authors)
+        //                 });
+        // })
+        Promise
+            .all([postPromise,authorsPromise])
+            .then(responses =>{
+                console.log(responses);
+                return Promise.all(responses.map(res => res.json()))
+            })
+            .then(responses => {
+                console.log(responses);
+            })
+        // fetch('/post.json')
+        //     .then(data => data.json())
+        //     .then(data => {
+        //         //  console.log(data);
+        //         post = data; //得到post
+        //         return new Promise((resolve, rejecj) => {
+        //             fetch('/authors.json') //异步
+        //                 .then(data => data.json())
+        //                 .then(data => {
+        //                     authors = data;
+        //                     resolve(authors)
+        //                 });
+        //         });
+        //     })
+        //     .then(data => {
+        //         console.log([authors,post]);
+        //     })
+        //  fetch('/authors.json').then(data => data.json()).then(data =>{
+        //      console.log(data);
+        //  })
+        //  console.log('---------------');   
+    </script>
+</body>
+
+</html>

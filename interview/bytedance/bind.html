@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function foo(a, b, c) {
+      return this.d + a + b + c;
+    }
+    // 1
+    let obj = {d: 5}
+    let bar = foo.bind(obj, 1, 2)
+    // 2
+    let sum = bar(3)  // => 1 2 3 交给 foo
+    console.log(sum);
+    let a = []
+    a.push(1)
+    // call / apply
+    // bind: 返回一个函数
+    // this
+    function isType(type, data) {
+      type = `[object ${type}]`;
+      return Object.prototype.toString.call(data) === type;
+    }
+    // [object Array]
+    // [object Object]
+    // [object Number]
+    let b = [], c = []
+    console.log(isType('Array', a))
+    console.log(isType('Array', b))
+    console.log(isType('Array', c))
+    console.log(isType('Object', a))
+    // 柯里化 curry
+    const isArrayType = isType.bind(null, 'Array');
+    const isObjectType = isType.bind(null, 'Object');
+    const isNumberType = isType.bind(null, 'Number');
+    console.log(isArrayType(a))
+    console.log(isArrayType(b))  // 'Array' b => isType
+
+
+    Function.prototype.myBind = function(thisObj, ...arg1) {
+      // 1
+      // 谁调用 bind，最终拼好的参数传给谁
+      let fn = this;
+      function foo(...arg2) {
+        // 2
+        const args = arg1.concat(arg2);
+        // 调用了，考虑 this
+        // fn 调用完了 有 结果返回，
+        return fn.apply(thisObj, args);
+      }
+      return foo
+    }
+  </script>
+</body>
+</html>

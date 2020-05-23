@@ -1,0 +1,34 @@
+{
+  "name": "lesson_shuidi",
+  "version": "1.0.0",
+  "description": "js fullstack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zby-66/lesson_shuidi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zby-66/lesson_shuidi/issues"
+  },
+  "homepage": "https://github.com/zby-66/lesson_shuidi#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "live-server": "^1.2.1",
+    "mongodb": "^3.3.4",
+    "mongoose": "^5.8.4",
+    "mysql": "^2.17.1",
+    "nodemon": "^2.0.1",
+    "redis": "^2.8.0",
+    "styled-components": "^5.1.0",
+    "vant-weapp": "^0.5.23",
+    "yarn": "^1.21.1"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 写一函数  -->
+  <script>
+    // S 12 
+    // A 6
+    // B 4
+    // C 2
+    // D 1 
+    // salary 
+  /*
+   * @param salary {number}
+   * @param type {string}
+   * @return {number}
+   */
+
+   window.onload = function() { 
+//     //局部作用域  
+//     function bonus (salary, type) {
+//       let total = 0;
+//       switch(type) {
+//         case 'S':
+//           total = salary*12 + salary*12;
+//           break;
+//         case 'A':
+//           total = salary*12 + salary*6;
+//           break;
+//         case 'B':
+//           total = salary*12 + salary*4;
+//           break;
+//         case 'C':
+//           total = salary*12 + salary*2;
+//           break;
+//         case 'C':
+//           total = salary*12 + salary;
+//           break;
+
+//       }
+//       return total;
+//     }
+function perfromanceS(salary){
+    return salary *24;
+}
+function perfromanceA(salary){
+    return salary *18;
+}
+function perfromanceB(salary){
+    return salary *16;
+}
+function perfromanceC(salary){
+    return salary *14;
+}
+function perfromanceD(salary){
+    return salary *13;
+}
+function perfromanceMVP(salary){
+    return salary *112;
+}
+//    console.log(bonus(20000,'A'));  
+function bonus (salary,perfromanceLeverl) {
+    if(perfromanceLeverl == 'S'){
+        return perfromanceS(salary);
+    }
+    if(perfromanceLeverl == 'A'){
+        return perfromanceA(salary);
+    }
+    if(perfromanceLeverl == 'B'){
+        return perfromanceB(salary);
+    }
+    if(perfromanceLeverl == 'C'){
+        return perfromanceC(salary);
+    }
+    if(perfromanceLeverl == 'D'){
+        return perfromanceD(salary);
+    }
+    if(perfromanceLeverl == 'MVP'){
+        return perfromanceMVP(salary);
+    }
+}
+console.log(bonus(20000,'MVP'))
+  }
+  </script>
+  
+</body>
+</html>
