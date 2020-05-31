@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //观察者模式
+    function defineReactive(target, key, value) {
+      observer(value);
+      Object.defineProperty(target, key, {
+        get() {
+          return value;
+        },
+        set(newValue) {
+          observer(value);//
+          if (newValue !== value) {
+            value = newValue
+            updareView();//更新视图
+          }
+        }
+      })
+    }
+
+    function updareView(){
+      console.log('视图更新');
+    }
+
+    function observer(target) {
+      if(typeof target !== 'object' || target === null) {
+        return target;
+      }
+
+      //push ->改写原形也可以
+      if(Array.isArray(target)) {
+        target.__proto__ = arrProto;
+      }
+
+      for(let key in target) {
+        defineReactive(target, key, target[key])
+      }
+    }
+    const oldArrayProperty = Array.prototype;
+    //截胡
+    const arrProto = Object.create(oldArrayProperty);
+    ["push", "pop", "shift", "unshift", "splice"].forEach(methodName => {
+      arrProto[methodName] = function() {
+        updareView();
+        oldArrayProperty[methodName].call(this, ...arguments);
+      }
+    })
+
+    const data = {
+      name: 'xiaop',
+      info: {
+        assress: 'nanchang'
+      },
+      nums: [10,20,30]
+    }
+    observer(data);
+    // data.name = 'daz'
+    // data.info.address = '深圳';
+    // data.nums[0] = 11; //不需要响应
+    data.nums.push(40);//手写支持
+
+
+  </script>
+</body>
+</html>
