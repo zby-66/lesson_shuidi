@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    position: relative;
+  }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+  const ele = document.querySelector('.box');
+  ele.style.left = 100 + ele.offsetLeft + 'px';
+  ele.style.top = 100 + ele.offsetTop + 'px';//2次触发回流
+
+  // const currentLeft = ele.offsetLeft,
+  // currentTop = ele.offsetTop;
+
+  // ele.style.left = 100 + currentLeft + 'px';
+  // ele.style.top = 100 + currentTop + 'px';
+  </script>
+</body>
+</html>
