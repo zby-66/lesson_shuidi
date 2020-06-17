@@ -36,6 +36,9 @@ console.log('script end')
 - promise1 是 pending: 这个 task 就会放入 事件循环的未来的某个(可能下一个)回合的 microtask queue 中
 
 - setTimeout 的回调也是个 task ，它会被放入 macrotask queue 即使是 0ms 的情况
+
+## Promise 构造函数是同步执行还是异步执行，那么 then 方法呢？
+- Promise new的时候会立即执行里面的代码 then是微任务 会在本次任务执行完的时候执行 setTimeout是宏任务 会在下次任务执行的时候执行
 ## Async/Await
 - async函数表示函数里面可能会有异步方法，await后面跟一个表达式，async方法执行时，遇到await会立即执行表达式，然后把表达式后面的代码放到微任务队列里，让出执行栈让同步代码先执行。
 ```js
