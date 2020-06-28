@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function add (a,b,c,d){
+      return a+b+c+d;
+    }
+
+    function FixedParmasCurry (fn) {
+      return function () {
+        var _arg = Array.prototype.slice.call(arguments,1);
+        return function () {
+          // arguments
+
+          var newArg = _arg.concat( [].slice.call(arguments,0))
+          return fn.apply(this, newArg);
+        }
+      }
+    }
+    // var newAdd = FixedParmasCurry(add, 1,2);
+    // newAdd(2,3)
+
+
+    function Curry (fn, length) {
+      var length = length || fn.length;
+      return function () {
+          if(arguments.length < length) {
+            var combined = [fn].concat( [].slice.call(arguments,0));//连接参数
+            return Curry(FixedParmasCurry.apply(this, combined), length - arguments.length);
+          }else {
+            return fn.apply(this, arguments);
+          }
+      }
+    }
+
+    var newAdd = Curry(add);
+    newAdd(1,2,3,4);
+    newAdd(1)(2)(3)(4);
+    var na1 = newAdd(1);
+    var na2 = newAdd(na1,2,3,3);
+    var na3 = newAdd(na1,3,3,3);
+    
+  </script>
+</body>
+</html>
