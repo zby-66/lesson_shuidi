@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "devtron": "^1.4.0",
-    "electron": "^4.0.1",
+    "electron": "^9.1.0",
     "electron-reload": "^1.4.0"
   },
   "keywords": [],
