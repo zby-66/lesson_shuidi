@@ -19,7 +19,7 @@
   "homepage": "https://github.com/zby-66/lesson_shuidi#readme",
   "dependencies": {
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "live-server": "^1.2.1",
     "mongodb": "^3.3.4",
     "mongoose": "^5.8.4",
